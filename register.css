@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(Login-img/Register-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    max-width: 80%;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #E5F9DB;
+    position: relative;
+}
+.backLogin{
+    position: absolute;
+    bottom: 1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-size: 15px;
+    color: gray;
+    opacity: 0.5;
+    transition: .3s;
+}
+.backLogin i{
+    margin-right: 5px;
+    transition: .3s;
+}
+.backLogin:hover{
+    opacity: 1;
+}
+.backLogin:hover i{
+    transform: translateX(-5px) scale(1.1);
+}
+.title{
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.title::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5%;
+    transform: translateX(50%);
+    width: 50%;
+    height: 2px;
+    background-color: #96B6C5;
+}
+#registerForm{
+    padding: .5rem;
+}
+#registerForm i{
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+.user-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.user-input-field{
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 5px;
+    font-weight: 400;
+    display: flex;
+    width: 100%;
+
+}
+.user-input-field{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.user-input-field label {
+    flex-basis: 40%;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+}
+.user-input-field input{
+    font-size: 18px;
+    flex-basis: 50%;
+    padding: 10px;
+    max-width: 450px;
+    width: 400px;
+    border-radius: 5px;
+    border-color: lightgray;
+    border: none;
+    outline: none;
+}
+
+.user-input-field input:focus {
+    border-color: #068FFF;
+    outline: none; 
+}
+.Gender{
+    margin:10px 0 10px 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Gender p{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+}
+.Gender label{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-basis: 50px;
+}
+.btns button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: 1px groove #539165;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.4s transform, 
+                0.4s letter-spacing,
+                0.4s background-color,
+                0.4s box-shadow,
+                0.1s border,
+                0.1s font-size,
+                0.1s color;
+}
+.btns button:hover{
+    transform: scale(1.1);
+    letter-spacing: 1.5px;
+    background: #98D8AA;
+    box-shadow: 0 0 35px #98D8AA ;
+    border: 2px solid #539165;
+    font-size: 17px;
+    color: #61677A;
+}
