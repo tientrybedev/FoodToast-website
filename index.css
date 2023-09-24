@@ -7,6 +7,7 @@
     --txt-color: #252B48;
     --btn-color: #FF4646;
     --ef-color: #9DB2BF;
+    --lh-color: #6528F7;
 }
 *{
     padding: 0;
@@ -23,10 +24,15 @@ html{
 body{
     width: 100%;
     min-height: 100vh;
-}
-main{
     background-color: var(--bg-color);
 }
+/*
+============================================================================================
+============================================================================================
+                                                                        NAV-BAR-SECTION
+============================================================================================
+============================================================================================
+*/
 .nav-bar{
     position: fixed;
     top:0;
@@ -38,9 +44,8 @@ main{
     padding: 5px 25px;
     transition: 0.5s;
     background-color: rgba(239, 225, 209, 0.5);
-    animation: nav 2s ease-in forwards; 
+    animation: nav 1s linear forwards; 
     z-index: 1;
-    
 }
 @keyframes nav {
     0%{
@@ -53,7 +58,7 @@ main{
 }
 
 .nav-bar.sticky{
-    padding: 0 25px;
+    top:0;
     background-color: var(--section-color);
 }
 
@@ -83,14 +88,19 @@ main{
     font-weight: 500;
     transition: 0.4s color ease, 0.4s letter-spacing ease;
 }
+.links ul li .home-active{
+    color: var(--lh-color)  ;
+    letter-spacing: 3px;
+    pointer-events: none;
+}
 .links ul li a:hover{
-    color: black;
+    color: var(--lh-color)  ;
     letter-spacing: 3px;
 }
 .links ul li a::after{
     content: '';
     position: absolute;
-    background-color: black;
+    background-color: var(--lh-color);
     width: 0;
     height: 1.5px;
     left: 50%;
@@ -98,6 +108,9 @@ main{
     transform: translate(-50%, -50%);
     transition: width 0.4s ease;
     pointer-events: none;
+}
+.links ul li .home-active::after{
+    width: 100%;
 }
 .links ul li a:hover::after{
     width: 100%;
@@ -118,6 +131,13 @@ main{
 .function .bar{
     display: none;
 }
+/*
+============================================================================================
+============================================================================================
+                                                                                            TOP-SECTION
+============================================================================================
+============================================================================================
+*/
 .top{
     position: relative;
     width: 100%;
@@ -210,7 +230,6 @@ main{
     width: 100%;
     background-color: #A7BBC7;
 }
-
 .btn-about{
     font-size: large;
     cursor: pointer;
@@ -225,7 +244,6 @@ main{
     animation: slidein2 1s 2s forwards ;
     opacity: 0;
 }
-
 .btn-about::before {
     content: "";
     position: absolute;
@@ -269,31 +287,33 @@ main{
 .sec-header3,
 .sec-header4,
 .sec-header5,
-.sec-header6{
+.sec-header6,
+.sec-header7{
     text-transform: uppercase;
-    font-size: 36px;
+    font-size: 2.1rem;
     letter-spacing: 2px;
     font-weight: 400;
-    padding: 10px 15px;
+    padding: 10px;
     border-radius: 10px;
     text-align: center;
     margin: 0 auto;
     width: fit-content;
 }
+.sec-header1{
+    margin-bottom: 3.5rem;
+}
 .service-content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding: 70px;
-    row-gap: 25px;
+    padding: 50px 60px 90px 60px;
     background-color: var(--section_odd-color);
 }
-
 .cards{
     width: 90%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
 }
@@ -302,20 +322,29 @@ main{
     flex-direction: column;
     align-items: center;
     width: 30%;
-    padding: 30px;
+    padding: 60px 20px;
     row-gap: 12px;
     border-radius: 10px;
     background-color: var(--ibg-color);
 }
 .service-card span{
     letter-spacing: 1px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
 }
-
+/*
+============================================================================================
+============================================================================================
+                                                                                            INTRODUCE-SECTION
+============================================================================================
+============================================================================================
+*/
+.sec-two{
+    margin-top: 4rem;
+}
 .intro-content{
     display: flex;
-    padding: 60px;
+    padding: 4rem;
     margin: 10px;
     column-gap: 20px;
 }
@@ -354,9 +383,20 @@ main{
     font-size: 18px;
     letter-spacing: 1px;
 }
+/*
+============================================================================================
+============================================================================================
+                                                                                            SPECIAL-SECTION
+============================================================================================
+============================================================================================
+*/
+.sec-header3{
+    margin-bottom: 3rem;
+}
 .sec-three{
     background-color: var(--section_odd-color);
-    padding: 50px;
+    padding: 4rem;
+
 }
 .special{
     display: flex;
@@ -365,35 +405,41 @@ main{
     flex-direction: column;
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 4rem ;
 }
 
-.special-contain{
+.special-contain {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    row-gap: 1rem;
+    row-gap: 2rem;
     padding: 10px;
-    
 }
-.item{
-    width: 70%;
+.item {
+    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    row-gap: 8px;
-    background-color: rgba(155, 171, 184, 0.4)
-    ;
+    row-gap: .5rem;
+    background-color: rgba(155, 171, 184, 0.4);
+    transition: .4s; /* Added semicolon here */
 }
+
+/* .item:hover {
+    transform: scale(1.1);
+} */
+
 .special-img{
     padding: 10px;
 }
 .special-img img{
     width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 5px;
 }
 .special-content{
@@ -408,6 +454,7 @@ main{
 .special h2{
     text-transform: capitalize;
     letter-spacing: 2px;
+    font-weight: 500;
 }
 .into-cart-btn{
     width: 60%;
@@ -431,14 +478,33 @@ main{
 .into-cart-btn:hover i{
     color: white;
 }
+/*
+============================================================================================
+============================================================================================
+                                                                                            TESTIMONIAL-SECTION
+============================================================================================
+============================================================================================
+*/
+.sec-header4{
+    margin-top: 2rem;
+    margin-bottom: 4.2rem;
+}
 .testimonial{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
+    min-height: 70%;
     flex-direction: column;
+    padding: 50px;
 }
 
+/*
+============================================================================================
+============================================================================================
+                                                                                            SLIDER-SECTION
+============================================================================================
+============================================================================================
+*/
 .wrapper {
     max-width: 1100px;
     width: 100%;
@@ -537,9 +603,20 @@ main{
     grid-auto-columns: 100%;
     }
 }
+/*
+============================================================================================
+============================================================================================
+                                                                                            BRAND-SECTION
+============================================================================================
+============================================================================================
+*/
+.sec-header5{
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
 .brands{
-    width: 90%;
-    margin-left: -50px;
+    width: 90%; 
+    padding: 50px;
 }
 .brands-container{
     display: flex;
@@ -554,13 +631,26 @@ main{
     mix-blend-mode: color-burn;
     border: 1px solid;
     border-radius: 3px;
+    transition: .5s;
 }
 .brands-container img:hover {
     mix-blend-mode: darken;
 }
+
+/*
+============================================================================================
+============================================================================================
+                                                                                            PARTICIPATE-SECTION
+============================================================================================
+============================================================================================
+*/
 .sec-five{
     background-color: var(--section_odd-color);
+    padding: 50px;
 }   
+.sec-header6{
+    margin: 2rem 0 4rem 0;
+}
 .participate{
     margin: 0 auto;
     display: flex;
@@ -572,77 +662,150 @@ main{
 
 .participate-content{
     width: 100%;
-    padding: 50px;
+    padding: 60px 20px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #E6FFFD;
     border-radius: 10px;
+    gap: 1rem;
 }
 .participate-img{
     padding: 40px;
     background-color: #A6D0DD;
     text-align: center;
     border-radius: 30px;
+    flex-basis: 50%;
+    overflow: hidden;
 }
 .participate-img img{
     width: 100%;
     height: auto;
     background-color: white;
-    border-radius: 49%;
+    border-radius: 50%;
     object-fit: cover;
     border: 3px solid #B4E4FF;
 }
 .btn-login-logout{
+    flex-basis: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     row-gap: 20px;
+    border: 2px solid black;
 }
 .btn-login-logout h2{
     text-transform: capitalize;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 30px;
 }
-.btn-login-logout button{
-    width: 200px;
-    height: 100px;
-    border-radius: 20px;
-    background:none;
-    font-size: 18px;
+/*============================================================================================
+============================================================================================
+                                                                                            PARTNER-SECTION
+============================================================================================
+============================================================================================
+*/
+.sec-header7{
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+.partner-content{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: .8rem;
+    margin-bottom: 8rem;
+    background-color: #E6FFFD;
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+.partner-txt{
+    padding: 20px;
+    flex-basis: 50%;
+    background-color: #82A0D8;
+    border-radius: 50px 20px 70px 10px;
+}
+
+.partner-txt h2{
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.txt{
+    padding: 10px;
+}
+.partner-txt dt{
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.partner-txt dd{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 2;
+}
+.partner-img{
+    width: 50%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.partner-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.btn-for-res{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+.link button{
+    padding: 15px;
+    width: 30%;
+    background-color: #AED2FF;
+    border-radius: 3px;
+    font-size: 1.1rem;
     transition: 0.5s;
     text-transform: capitalize;
-    border-color: black;
+    border: 2px solid black;
+    letter-spacing: 1px;
 }
-.btn-login-logout button:hover{
-    background-color: var(--ef-color);
-    font-size: 22px;
+.link button:hover{
+    background-color: var(--btn-color);
     color: var(--ibg-color);
     border-color: var(--ibg-color);
 }
 /*
-=============================================================================
-
+==================================================================================================================
+==================================================================================================================
                                                                     FOOTER-SECTION
-
-=============================================================================
-
+==================================================================================================================
+==================================================================================================================
 */
 footer{
     width: 100%;
-    height: fit-content;
+    height: auto;
     background-color: #DBDFEA;
     padding: 10px;
     border-radius: 20px 20px 0 0;
 }
 .footer-container{
+    margin-top: 2rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
     width: 100%;
     column-gap: 10px;
+    margin-bottom: 1rem;
 }
 .box{
     flex-basis: calc(100%/3);
@@ -670,6 +833,10 @@ footer{
     text-transform: capitalize;
     padding: 10px;
     text-align: center;
+}
+.social-box h2{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 .social-box span{
     padding: 10px;
