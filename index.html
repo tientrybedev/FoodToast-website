@@ -6,11 +6,18 @@
     <title>FoodToast</title>
     <link rel="shortcut icon" href="Home-img/food-logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <header>
+        <!--
+================================================================================
+================================================================================
+                                                                                    NAV-BAR
+================================================================================
+================================================================================
+        -->
         <nav class="nav-bar">
             <div class="logo">
                 <a href="#"><img src="Home-img/FT-logo.png" alt=""></a>
@@ -18,7 +25,7 @@
             <div class="links">
                     <ul>
                         <li><a href="#" class="home-active">Trang chủ</a></li>
-                        <li><a href="#">Menu</a></li>
+                        <li><a href="produces-page.html">Menu</a></li>
                         <li><a href="#">Đặc biệt</a></li>
                         <li><a href="#">Dịch vụ</a></li>
                         <li><a href="#">Thông tin</a></li>
@@ -26,7 +33,9 @@
             </div>
             <div class="function">
                     <div class="search"><i class="fa-solid fa-magnifying-glass fa-lg"></i></div>
-                    <div class="cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
+                    <div class="cart">
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+                    </div>
                     <div class="btn-login">
                         <a href="login.html"><i class="fa-solid fa-user fa-lg"></i> Đăng nhập </a>
                     </div>
@@ -45,11 +54,9 @@
                 <h1>Chào mừng đến <br><strong>FoodToast</strong></h1>
                     <p>Website đặt thức ăn</p>
                         <a href="#"><button class="btn-order">Order Ngay</button></a>
-
                         <a href="#"><button class="btn-about">Tìm hiểu thêm</button></a> 
             </div>
         </section>  
-
         <section class="service-content">
             <h1 class="sec-header1">Chúng tôi Đảm bảo</h1>
             <div class="cards">
@@ -73,10 +80,7 @@
                 </div>
             </div>
         </section>
-        <br>
-        <br>
-        <br>
-        <br>
+
         <section class="sec-two">
             <h1 class="sec-header2">FOODTOAST?</h1>  
             <div class="intro-content">
@@ -107,7 +111,6 @@
         <section class="sec-three">
         <div class="special">
             <h1 class="sec-header3">Deal đặc biệt hôm nay</h1>
-            <br>
             <div class="special-contain">
                 <div class="item">
                     <div class="special-img">
@@ -214,12 +217,8 @@
                 </div>
             </div>
         </section>
-        <br>
-        <br>
         <section class="testimonial">
             <h1 class="sec-header4">Nhận xét về chúng tôi</h1>
-            <br>
-            <br>
             <div class="wrapper">
                 <i id="left" class="fa-solid fa-chevron-left"></i>
                 <ul class="carousel">
@@ -298,11 +297,7 @@
                 </ul>
                 <i id="right" class="fa-solid fa-chevron-right"></i>
             </div>
-            <br>
-            <br>
             <h1 class="sec-header5">đối tác với</h1>
-            <br>
-            <br>
             <div class="brands">
                 <div class="brands-container">
                     <img src="Home-img/logo2.jpg" alt="">
@@ -314,37 +309,55 @@
                 </div>
             </div>
         </section>
-        <br>
-        <br>
-        <br>
         <section class="sec-five">
-            <br>
-            <br>
             <div class="participate">
                 <h1 class="sec-header6">Tham gia với chúng tôi</h1>
-                <br>
-                <br>
                 <div class="participate-content">
                     <div class="participate-img">
-                        <img src="Home-img/participate.png" alt="">
+                        <img src="Home-img/participant.jpg" alt="">
                     </div>
                     <div class="btn-login-logout">
-                        <h2>Trở thành thành viên</h2>
-                        <a href="#login.html">
-                            <button>đăng ký</button>
-                        </a>
-                        <a href="">
-                            <button>đăng nhập</button>
-                        </a>
+                        <h2>Trở thành thành viên ngay</h2>
+                        <div class="btn-for-user">
+                            <a href="login.html" class="userLog link">
+                                <button>đăng ký</button>
+                            </a>
+                            <a href="register.html" class="userRes link ">
+                                <button>đăng nhập</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
             </div>
         </section>
-    </main>
+        <section class="partner">
+            <h1 class="sec-header7">Là cửa hàng?</h1>
+            <div class="partner-content">
+                <div class="partner-txt">
+                    <h2>Trở thành đối tác</h2>
+                    <dl class="txt">
+                        <dt>Mở rộng phạm vi khách hàng:</dt>
+                        <dd>-  Chúng tôi có một cơ sở khách hàng rộng lớn và đa dạng. <br>- Trở thành đối tác của chúng tôi sẽ giúp cửa hàng của bạn tiếp cận được với một lượng khách hàng mới, tăng doanh số và tạo ra cơ hội kinh doanh mới.</dd>
+                        <dt>Quản lý đơn đặt hàng thuận tiện:</dt>
+                        <dd>-  Chúng tôi cung cấp một giao diện quản lý đơn đặt hàng dễ sử dụng, giúp bạn quản lý và xử lý đơn hàng một cách hiệu quả</dd>
+                        <dt>Xây dựng tương tác và đánh giá tích cực:</dt>
+                        <dd>-  Điều này giúp tạo niềm tin và độ tin cậy trong cửa hàng của bạn, thu hút khách hàng mới và tạo ra một trải nghiệm tốt cho người dùng.</dd>
+                    </dl>
+                    <div class="btn-for-res">
+                        <a href="#" class="login-res link"><button>Đăng ký</button></a>
+                    <a href="#"class="register-res link"><button>Đăng nhập</button></a>
+                    </div>
+                    
+                </div>
+                <div class="partner-img">
+                    <img src="Home-img/restaurant.jpg" alt="">
+                </div>
+            </div>
 
+
+        </section>
+    </main>
     <footer>
-        <br>
         <div class="footer-container">
             <div class="left box">
                 <h2>Thông tin</h2>
@@ -369,12 +382,10 @@
                     </ul> 
             </div>       
         </div>
-        <br>
+
         <hr style="margin: 0 auto; width: 50%; border: 1px groove gray;">
         <div class="social-box">
             <h2>Theo dõi ngay</h2>
-            <br>
-            <br>
             <span><i class="fa-brands fa-facebook " ></i></span>
             <span><i class="fa-brands fa-youtube " ></i></span>
             <span><i class="fa-brands fa-twitter " ></i></span>
@@ -382,7 +393,7 @@
             <span><i class="fa-brands fa-tiktok "></i></span>
         </div>
     </footer> 
-    <script src="main.js"></script>
+    <script src="index.js"></script>
     <script>
         ScrollReveal({  
         reset: false,
