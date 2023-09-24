@@ -1,8 +1,53 @@
-window.addEventListener("scroll", function(){
+//==========================================================================================
+//==========================================================================================
+//===============================================sticky-navbar
+//==========================================================================================
+//==========================================================================================
+let prevScrollPos = window.pageYOffset;
+let isNavVisible = true;
+let reachedTop = false;
+
+window.addEventListener("scroll", function() {
     var nav = document.querySelector(".nav-bar");
-    nav.classList.toggle("sticky", window.scrollY > 0);
+    var currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+        // Scrolling up
+        if (!isNavVisible) {
+            nav.style.top = "0";
+            nav.classList.add("sticky");
+            isNavVisible = true;
+        }
+    } else {
+        // Kéo xuống
+        if (isNavVisible) {
+            nav.style.top = "-125px";
+            nav.classList.remove("sticky");
+            isNavVisible = false;
+        }
+    }
+
+    if (currentScrollPos === 0) {
+        reachedTop = true;
+    } else {
+        reachedTop = false;
+    }
+
+    if (reachedTop) {
+        nav.classList.remove("sticky");
+    } else {
+        nav.classList.add("sticky");
+    }
+
+    prevScrollPos = currentScrollPos;
 });
 
+
+ // ==========================================================================
+  // ==========================================================================
+//======================================carousel-section
+ // ==========================================================================
+// ===========================================================================
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".guest-card").offsetWidth;
