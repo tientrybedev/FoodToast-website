@@ -7,18 +7,40 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="shortcut icon" href="Login-img/food-logo.png" type="image/x-icon">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Đăng ký</title>
 </head>
 <body>
+    <div class="loader-container">
+        <div class="waiting-img">
+            <div class="waiting-card">
+                <img src="loading-img/wp1.png" alt="">
+            </div>
+            <div class="waiting-card">
+                <img src="loading-img/wp2.png" alt="">
+            </div>
+            <div class="waiting-card">
+                <img src="loading-img/wp3.png" alt="">
+            </div>
+        </div>
+        <div class="loader">
+            <p class="loading">LOADING
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+            </p>
+        </div>
+    </div>
     <div class="container">
-        <a href="login.html" class="backLogin"><i class="fa-solid fa-left-long"></i>đăng ký</a>
+        <a href="login.html" class="backLogin"><i class="fa-solid fa-left-long"></i>Đăng nhập</a>
         <h2 class="title">Đăng ký</h2>
         <form action="" method="post" id="registerForm" >
             <div class="user-detail">
                 <div class="user-input-field">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-circle-user"></i>
                     <label for="username">Tên đăng nhập</label>
-                    <input type="text" id="username" name="username" placeholder="username" required>
+                    <input type="text" class="username-input" id="username" name="username" placeholder="username" required>
                 </div>
                 <div class="user-input-field">
                     <i class="fa-solid fa-envelope"></i>
@@ -36,12 +58,12 @@
                     <input type="date" id="date" name="date" min="1800-01-01" >
                 </div>
                 <div class="user-input-field">
-                    <i class="fa-solid fa-lock"></i>
+                    <i class="fa-solid fa-key"></i>
                     <label for="password">Mật khẩu</label>
                     <input type="password" id="password" name="password" required>
                 </div>
                 <div class="user-input-field">
-                    <i class="fa-solid fa-lock"></i>
+                    <i class="fa-solid fa-key"></i>
                     <label for="confirmPassword">Xác nhận mật khẩu</label>
                     <input type="password" id="confirmPassword" name="confirmPassword" required>
                 </div>
@@ -63,10 +85,30 @@
                 </div>
                 <div class="btns">
                     <button type="reset">Xóa</button>
-                    <button type="submit">Register</button>
+                    <button type="submit">Đăng ký</button>
                 </div>
             </div>
         </form>
     </div>
+    <div class="advertise">
+        <div class="item item1">
+            <img src="Login-img/logo-FT-AD.png" alt="">
+        </div>
+        <div class="item item2">
+            <img src="Login-img/ad1.jpg" alt="">
+        </div>
+        <div class="item item3">
+            <img src="Login-img/ad2.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        ScrollReveal({ reset: false });
+        ScrollReveal().reveal('.container', { duration: 850, delay: 4500 , distance: '30px', origin: 'bottom'});
+        ScrollReveal().reveal(' .item1', { duration: 1200, delay: 4500 , distance: '60px', origin: 'top'});
+        ScrollReveal().reveal(' .item2, .item3 ', { duration: 1200, delay: 4500 , distance: '60px', origin: 'top', interval: 200});
+
+    </script>
+    <script src="register.js"></script>
 </body>
 </html>
